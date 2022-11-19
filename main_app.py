@@ -28,6 +28,9 @@ df['y'] = y
 
 fig, ax = plt.subplots()
 ax.scatter(x,y)
+ax.set_title(f'$f(x) = x^2$')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
 
 # st.line_chart(df)
 
