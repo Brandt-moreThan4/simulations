@@ -10,6 +10,9 @@ plt.style.use('ggplot')
 
 st.title('Simulating Retirement')
 
+with open('markdown_stuff.md') as f:
+    mk_text = f.read()
+st.write(mk_text)
 
 age = st.slider('How old are you?', 0, 130, 25)
 st.write("I'm ", age, 'years old')
