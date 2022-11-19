@@ -1,10 +1,34 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import params as P
 
-st.title('App title goes here:')
+plt.style.use('ggplot')
 
 
-df = pd.DataFrame(np.random.random(10))
 
-df
+st.title('Simulating Retirement')
+
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
+
+def run_simulations():
+    x = range(age)
+    y = np.power(x,2)
+
+    return (x,y)
+
+x, y = run_simulations()
+
+df = pd.DataFrame()
+df['x'] = x
+df['y'] = y
+
+fig, ax = plt.subplots()
+ax.scatter(x,y)
+
+# st.line_chart(df)
+
+st.pyplot(fig)
