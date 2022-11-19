@@ -3,10 +3,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import params as P
+import streamlit.components.v1 as components
 
 plt.style.use('ggplot')
 
 
+components.html('<h1>LOLOO<h1>')
 
 st.title('Simulating Retirement')
 
